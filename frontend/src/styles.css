@@ -66,3 +66,23 @@ h2 { font-size: 18px; margin-bottom: 0; }
 footer { text-align: center; color: #9aa2b1; font-size: 11px; padding: 35px 0 10px; }
 @media (max-width: 850px) { .content-grid { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .dashboard { padding: 20px 4%; } .auth-card { padding: 27px 22px; } .vehicle-item { flex-wrap: wrap; } .vehicle-price { text-align: left; } .topbar { align-items: flex-start; gap: 15px; } .user-area { flex-direction: column; align-items: flex-end; gap: 7px; } }
+select { width: 100%; border: 1px solid #dce2ec; background: white; border-radius: 9px; padding: 12px 13px; outline: none; margin-top: 7px; color: #172033; }
+select:focus { border-color: #4776df; box-shadow: 0 0 0 3px #4776df1c; }
+.rental-panel { margin-top: 22px; }
+.rental-form { display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 12px; align-items: end; }
+.rental-form label { margin-bottom: 0; }
+.rental-preview { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; padding: 14px; border-radius: 10px; background: #f5f7fb; color: #475467; font-size: 13px; }
+.rental-preview strong { color: #172033; }
+.rental-preview small { width: 100%; color: #7b8496; }
+.rental-form button { grid-column: 1 / -1; }
+.rental-list { display: grid; gap: 12px; }
+.rental-item { display: grid; grid-template-columns: minmax(180px, 1fr) auto auto; align-items: center; gap: 18px; border: 1px solid #edf0f5; border-radius: 12px; padding: 16px; }
+.rental-info { display: grid; gap: 5px; color: #7b8496; font-size: 12px; }
+.rental-info strong { color: #172033; font-size: 14px; }
+.rental-price { display: grid; gap: 6px; text-align: right; color: #7b8496; font-size: 12px; }
+.rental-price strong { color: #172033; font-size: 15px; }
+.return-button { background: #b45309; }
+.return-button:hover { background: #92400e; }
+.history-item { grid-template-columns: minmax(180px, 1fr) auto; }
+.empty-state.compact { min-height: 140px; }
+@media (max-width: 850px) { .rental-form { grid-template-columns: 1fr; } .rental-preview, .rental-form button { grid-column: auto; } .rental-item, .history-item { grid-template-columns: 1fr; align-items: stretch; } .rental-price { text-align: left; } }

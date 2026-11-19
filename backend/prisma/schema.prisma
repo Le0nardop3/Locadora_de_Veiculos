@@ -43,4 +43,6 @@ model Locacao {
 
   @@index([usuarioId])
   @@index([veiculoId])
+  @@index([usuarioId, status])
+  @@index([veiculoId, status])
 }

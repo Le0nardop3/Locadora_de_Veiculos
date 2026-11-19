@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes";
 import vehicleRoutes from "./routes/vehicleRoutes";
+import locacaoRoutes from "./routes/locacaoRoutes";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get("/health", (_req, res) => {
 
 app.use("/auth", authRoutes);
 app.use("/vehicles", vehicleRoutes);
+app.use("/locacoes", locacaoRoutes);
 
 const port = Number(process.env.PORT) || 3000;
 
