@@ -113,6 +113,9 @@ export class LocacaoService {
         }
 
         const dataDevolucao = new Date();
+        if (dataDevolucao.getTime() < locacao.dataInicio.getTime()) {
+          throw new Error(`Esta locação ainda não começou. O início está previsto para ${locacao.dataInicio.toLocaleString("pt-BR")}. A devolução só poderá ser registrada a partir desse horário.`);
+        }
         const diarias = calcularDiarias(locacao.dataInicio, dataDevolucao);
         const veiculo = await tx.veiculo.findUnique({ where: { id: locacao.veiculoId } });
         if (!veiculo) {

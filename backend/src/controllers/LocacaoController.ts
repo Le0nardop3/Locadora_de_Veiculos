@@ -6,7 +6,7 @@ const locacaoService = new LocacaoService();
 function statusErro(mensagem: string) {
   if (mensagem.includes("não disponível") || mensagem.includes("Conflito") || mensagem.includes("acabou de ser reservado") || mensagem.includes("já foi finalizada")) return 409;
   if (mensagem.includes("não encontrada") || mensagem.includes("não encontrado")) return 404;
-  if (mensagem.includes("Selecione um veículo válido") || mensagem.includes("Informe datas") || mensagem.includes("A data de devolução") || mensagem.includes("Identificador de locação inválido")) return 400;
+  if (mensagem.includes("ainda não começou") || mensagem.includes("Selecione um veículo válido") || mensagem.includes("Informe datas") || mensagem.includes("A data de devolução") || mensagem.includes("Identificador de locação inválido")) return 400;
   return 500;
 }
 

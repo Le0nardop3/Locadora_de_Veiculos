@@ -61,6 +61,25 @@ No PowerShell do Windows, use `Copy-Item .env.example .env`.
 
 O Vite mostra o endereço de acesso, normalmente `http://localhost:5173`.
 
+
+
+## Entrega 3 — Interface e integração
+
+A interface foi reorganizada para facilitar o uso do sistema:
+
+- Navegação lateral com visão geral, frota, locações ativas e histórico.
+- Painel de indicadores de veículos e locações.
+- Cadastro de veículos com validação de ano e diária.
+- Formulário de locação com seleção de veículos disponíveis, datas e estimativa de diárias/valor.
+- Área de locações ativas com dados da reserva e ação de devolução.
+- Histórico com período, diárias, valor final e status.
+- Estados de carregamento e mensagens de sucesso/erro integradas ao layout.
+- Tratamento de erro de conexão e sessão expirada (HTTP 401).
+- Layout responsivo para desktop, tablet e telas menores.
+- Os serviços Axios e endpoints existentes foram mantidos; a API continua responsável pelas regras de negócio e pelo cálculo oficial dos valores.
+
+A interface estima o valor antes da confirmação apenas para apresentar uma prévia. A API continua calculando e validando o valor oficial.
+
 ## Rotas da API
 
 | Método | Rota | Protegida | Descrição |
